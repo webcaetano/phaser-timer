@@ -1,0 +1,31 @@
+{
+	"name": "phaser-timer",
+	"version": "0.0.0",
+	"dependencies": {},
+	"devDependencies": {
+		"stats.js": "*",
+		"lodash": "~3.10.1",
+		"dat-gui": "git@github.com:webcaetano/dat.gui.git#53762381014f91f5d22c10515dbdec85a425c04c",
+		"phaser": "~2.6.2",
+		"phaser-utils": "^1.1.2",
+		"phaser-craft": "^1.5.1"
+	},
+	"main": "build/timer.js",
+	"externals": {
+		"phaser": "Phaser",
+		"lodash": "_",
+		"craft": "$craft",
+		"timer": "$timer",
+		"utils": "$utils",
+		"stats": "Stats"
+	},
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"src",
+		"gulp",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
