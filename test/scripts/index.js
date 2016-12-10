@@ -10,6 +10,7 @@ var setup = {
 
 require('./modules/stats')();
 
+
 var game = main.game = new Phaser.Game(
 	setup.width,
 	setup.height,
@@ -17,6 +18,9 @@ var game = main.game = new Phaser.Game(
 	setup.where,
 	setup.where,
 );
+
+main.craft = require('craft')(game);
+main.timer = require('timer')(game);
 
 game.state.add('game', require('./game'));
 game.state.start('game');
