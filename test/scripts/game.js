@@ -32,6 +32,7 @@ module.exports = function(){
 			'repeatEach',
 			'loopEach',
 			'repeatTimes',
+			'loopTimes',
 		],function(resp,val,i){
 			resp[val] = require('./'+val);
 		},{});

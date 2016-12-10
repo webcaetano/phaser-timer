@@ -57,5 +57,20 @@ module.exports = function(game){
 		return timer;
 	}
 
+	self.loopTimes = function(amount,delay,callback=_.noop,playAtStart=false){
+		var timer = game.time.create(false);
+		var i = 0;
+		var tick = function(){
+			callback.apply(null,[i]);
+			i = (i+1)%amount;
+		}
+
+		if(playAtStart) tick();
+		timer.loop(delay,tick)
+		timer.start();
+
+		return timer;
+	}
+
 	return self;
 }
