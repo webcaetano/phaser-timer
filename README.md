@@ -1,4 +1,4 @@
-# phaser-timer [![bower][bower-img]][bower-url] ![filesize][file-size-img]
+[![bower][bower-img]][bower-url] ![filesize][file-size-img]
 
 <h1 align="center"> Phaser Timer </h1>
 
