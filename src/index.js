@@ -38,5 +38,24 @@ module.exports = function(game){
 		return timer;
 	}
 
+	self.repeatTimes = function(amount,delay,callback=_.noop,onComplete=null,playAtStart=false){
+		var timer = game.time.create(false);
+		var i = 0;
+		var tick = function(){
+			callback.apply(null,[i]);
+			i++;
+		}
+
+		if(playAtStart) tick();
+		timer.repeat(delay,amount-(playAtStart ? 1 : 0),tick)
+		timer.start();
+		timer.onComplete.addOnce(function(){
+			if(onComplete) onComplete();
+			timer.destroy();
+		});
+
+		return timer;
+	}
+
 	return self;
 }

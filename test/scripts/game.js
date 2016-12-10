@@ -31,6 +31,7 @@ module.exports = function(){
 		var examples = _.transform([
 			'repeatEach',
 			'loopEach',
+			'repeatTimes',
 		],function(resp,val,i){
 			resp[val] = require('./'+val);
 		},{});
